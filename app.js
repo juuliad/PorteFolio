@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Définir le dossier statique pour les fichiers publics
 app.use(express.static(path.join(__dirname, 'public'), { 'extensions': ['html', 'png', 'jpg', 'css', 'php'] }));
